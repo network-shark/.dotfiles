@@ -12,8 +12,8 @@
         url = https://github.com/scrooloose/nerdtree.git
 
 [submodule ".vim/bundle/syntastic"]
-        path = .vim/bundle/syntastic
-        url = https://github.com/scrooloose/syntastic.git
+	path = .vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
 
 [submodule ".vim/bundle/vim-gitgutter"]
 	path = .vim/bundle/vim-gitgutter

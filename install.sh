@@ -29,27 +29,28 @@ if [ ! -d $fzf_dir ]; then
   yes | ~/.fzf/install
 else
   echo "FZF Alrady installed"
+fi
 
-echo "Creating Symlinks in $Home environment"
+echo "Creating Symlinks in $HOME environment"
 
 ## ZSH
-[[ ! -d $HOME/.zsh ]] && ln -s $zsh_dir $HOME/.zsh \
-  || echo ".zsh already exists..."
+[ ! -d $HOME/.zsh ] && ln -s $zsh_dir $HOME/.zsh \
+ || echo ".zsh already exists..."
 
-[[ ! -e $HOME/.zshrc ]] && ln -s $zshrc $HOME/.zshrc \
-  || echo ".zshrc already exists..."
+[ ! -e $HOME/.zshrc ] && ln -s $zshrc $HOME/.zshrc \
+ || echo ".zshrc already exists..."
 
-[[ ! -e $HOME/.zlogin ]] && ln -s $zlogin $HOME/.zlogin \
-  || echo ".zlogin already exists..."
+[ ! -e $HOME/.zlogin ] && ln -s $zlogin $HOME/.zlogin \
+ || echo ".zlogin already exists..."
 
 ## VIM
-[[ ! -d $HOME/.vim ]] && ln -s $vim_dir $HOME/.zsh \
+[ ! -d $HOME/.vim ] && ln -s $vim_dir $HOME/.zsh \
   || echo ".vim already exists..."
 
-[[ ! -e $HOME/.vimrc ]] && ln -s $vimrc $HOME/.vimrc \
+[ ! -e $HOME/.vimrc ] && ln -s $vimrc $HOME/.vimrc \
   || echo ".vimrc already exists..."
 
 ## TMUX
-[[ ! -e $HOME/.tmux.conf ]] && ln -s $tmux_conf $HOME/.tmux.conf \
+[ ! -e $HOME/.tmux.conf ] && ln -s $tmux_conf $HOME/.tmux.conf \
   || echo ".tmux.conf already exists..."
 

@@ -151,10 +151,8 @@ autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 " Ansible Stuff
 "au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
 
-" FZF Runtimepath MacOS"
-set rtp+=/usr/local/opt/fzf
-" FZF Runtimepath on Freebsd"
-set rtp+=/usr/local/bin/fzf
+" FZF Runtimepath "
+set rtp+=~\.fzf
 
 set runtimepath^=~/.vim/bundle/ag
 "Show hidden files Nerdtree

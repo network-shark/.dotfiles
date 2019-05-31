@@ -31,6 +31,7 @@ else
   echo "FZF Alrady installed"
 fi
 
+
 echo "Creating Symlinks in $HOME environment"
 
 ## ZSH

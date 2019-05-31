@@ -15,3 +15,6 @@
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 
+[submodule ".vim/bundle/fzf.vim"]
+	path = .vim/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git

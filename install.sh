@@ -44,7 +44,7 @@ echo "Creating Symlinks in $HOME environment"
  || echo ".zlogin already exists..."
 
 ## VIM
-[ ! -d $HOME/.vim ] && ln -s $vim_dir $HOME/.zsh \
+[ ! -d $HOME/.vim ] && ln -s $vim_dir $HOME/.vim \
   || echo ".vim already exists..."
 
 [ ! -e $HOME/.vimrc ] && ln -s $vimrc $HOME/.vimrc \

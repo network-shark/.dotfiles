@@ -152,7 +152,7 @@ autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 "au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
 
 " FZF Runtimepath "
-set rtp+=~\.fzf
+set rtp+=~/.fzf
 
 set runtimepath^=~/.vim/bundle/ag
 "Show hidden files Nerdtree

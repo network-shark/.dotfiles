@@ -24,6 +24,8 @@ set undofile " Maintain undo history between sessions"
 "response
 set ttimeout
 set ttimeoutlen=50
+" alwasy display status line
+set laststatus=2
 "modifiedflag, charcount, filepercent, filepath
 set statusline=%=%m\ %c\ %P\ %f
 

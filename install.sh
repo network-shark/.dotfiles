@@ -45,7 +45,7 @@ echo "Creating Symlinks in $HOME environment"
 [ ! -e $HOME/.tmux.conf ] && ln -s $tmux_conf $HOME/.tmux.conf \
   || echo ".tmux.conf already exists..."
 
-
+#FZF
 if [ ! -d $fzf_dir ]; then
   echo "Installing FZF"
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -53,3 +53,11 @@ if [ ! -d $fzf_dir ]; then
 else
   echo "FZF Alrady installed"
 fi
+#AG
+if [ which ag ]; then
+  echo "AG is installed"
+else
+  echo "Please install AG / the_silver_searcher"
+
+
+

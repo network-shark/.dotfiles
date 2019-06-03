@@ -53,11 +53,11 @@ if [ ! -d $fzf_dir ]; then
 else
   echo "FZF Alrady installed"
 fi
+
 #AG
-if [ which ag ]; then
+if [ "$(which ag)" ]; then
   echo "AG is installed"
 else
-  echo "Please install AG / the_silver_searcher"
-
-
-
+  echo "Error: Please install AG / the_silver_searcher"
+  echo "# Install Instructions https://github.com/ggreer/the_silver_searcher"
+fi

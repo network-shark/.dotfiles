@@ -61,3 +61,4 @@ else
   echo "Error: Please install AG / the_silver_searcher"
   echo "# Install Instructions https://github.com/ggreer/the_silver_searcher"
 fi
+# Powerline TMUX

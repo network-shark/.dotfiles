@@ -9,6 +9,7 @@ vimrc=$dotfiles/.vimrc
 vim_dir=$dotfiles/.vim
 tmux_conf=$dotfiles/.tmux.conf
 gitignore=$dotfiles/.gitignore
+powerline_tmux=
 
 echo "Installing/Updating dotfiles...\n"
 
@@ -61,4 +62,17 @@ else
   echo "Error: Please install AG / the_silver_searcher"
   echo "# Install Instructions https://github.com/ggreer/the_silver_searcher"
 fi
-# Powerline TMUX
+# ZSH Powerline
+
+if [ -e $HOME/.zsh/lib/powerline.zsh ]; then
+  echo ".powerline.zsh already exists..."
+else
+  powerline_path="$(find /usr/local/lib -name 'powerline.zsh' )"
+  for word in $powerline_path
+  do
+    ln -s $word .zsh/lib/powerline.zsh
+    echo ".powerline.zsh created"
+    break
+  done
+fi
+

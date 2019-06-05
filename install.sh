@@ -9,7 +9,6 @@ vimrc=$dotfiles/.vimrc
 vim_dir=$dotfiles/.vim
 tmux_conf=$dotfiles/.tmux.conf
 gitignore=$dotfiles/.gitignore
-powerline_tmux=
 
 echo "Installing/Updating dotfiles...\n"
 
@@ -76,7 +75,7 @@ else
   done
 fi
 
-
+# Powerline Conf
 if [ -e $HOME/.powerline.conf ]; then
   echo ".powerline.conf already exists..."
 else
@@ -89,6 +88,12 @@ else
   done
 fi
 
-#echo "$(python -c "import sys; print('\n'.join(sys.path))" | grep site-packages)"
+# ZSH Autosuggestions
 
-
+if [ -e $HOME/.zsh/lib/zsh-autosuggestions.zsh ]; then
+  echo ".zsh-autosuggestions.zsh already exists..."
+else
+  do
+    ln -s /Users/sharky/.dotfiles/.zsh/completion/zsh-autosuggestions/zsh-autosuggestions.zsh  .zsh/lib/zsh-autosuggestions.zsh
+  done
+fi

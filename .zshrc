@@ -37,11 +37,11 @@ if command -v pyenv 1>/dev/null 2>&1; then
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-PYTHON_PACKAGES = $(pip3 show powerline-status | grep Location: | awk '{print $2}')
-
-if [ -f `which powerline-daemon` ]; then
-   powerline-daemon -q
-   POWERLINE_BASH_CONTINUATION=1
-   POWERLINE_BASH_SELECT=1
-   . $PYTHON_PACKAGES/powerline/bindings/zsh/powerline.zsh
-fi
+#PYTHON_PACKAGES = "$(pip3 show powerline-status | grep Location: | awk '{print $2}')"
+#echo $PYTHON_PACKAGES
+#if [ -f `which powerline-daemon` ]; then
+#   powerline-daemon -q
+#   POWERLINE_BASH_CONTINUATION=1
+#   POWERLINE_BASH_SELECT=1
+#   source $PYTHON_PACKAGES/powerline/bindings/zsh/powerline.zsh
+#fi

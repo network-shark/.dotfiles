@@ -67,12 +67,28 @@ fi
 if [ -e $HOME/.zsh/lib/powerline.zsh ]; then
   echo ".powerline.zsh already exists..."
 else
-  powerline_path="$(find /usr/local/lib -name 'powerline.zsh' )"
-  for word in $powerline_path
+  powerline_zsh_path="$(find /usr/local/lib -name 'powerline.zsh' )"
+  for word in $powerline_zsh_path
   do
     ln -s $word .zsh/lib/powerline.zsh
     echo ".powerline.zsh created"
     break
   done
 fi
+
+
+if [ -e $HOME/.powerline.conf ]; then
+  echo ".powerline.conf already exists..."
+else
+  powerline_conf_path="$(find /usr/local/lib -name 'powerline.conf' )"
+  for word in $powerline_conf_path
+  do
+    ln -s $word ~/.powerline.conf
+    echo ".powerline.conf created"
+    break
+  done
+fi
+
+#echo "$(python -c "import sys; print('\n'.join(sys.path))" | grep site-packages)"
+
 

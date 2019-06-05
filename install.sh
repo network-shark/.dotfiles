@@ -93,7 +93,5 @@ fi
 if [ -e $HOME/.zsh/lib/zsh-autosuggestions.zsh ]; then
   echo ".zsh-autosuggestions.zsh already exists..."
 else
-  do
-    ln -s /Users/sharky/.dotfiles/.zsh/completion/zsh-autosuggestions/zsh-autosuggestions.zsh  .zsh/lib/zsh-autosuggestions.zsh
-  done
+    ln -s $HOME/.dotfiles/.zsh/completion/zsh-autosuggestions/zsh-autosuggestions.zsh  .zsh/lib/zsh-autosuggestions.zsh
 fi

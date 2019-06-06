@@ -43,7 +43,8 @@ if [ -f `which powerline-daemon` ]; then
    powerline-daemon -q
    POWERLINE_BASH_CONTINUATION=1
    POWERLINE_BASH_SELECT=1
+#   POWERLINE_CONFIG_OVERRIDES=ext.shell.colorscheme=solarized
+   POWERLINE_COLORSCHEME_OVERRIDES=solarized
    source $HOME/.zsh/lib/powerline.zsh
 fi
-
 

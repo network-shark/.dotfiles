@@ -88,6 +88,14 @@ else
   done
 fi
 
+# Powerline Local Config
+
+if [ -e $HOME/.config/powerline/config.json ]; then
+  echo ".config already exists..."
+else
+    ln -s $HOME/.dotfiles/.config  $HOME/.config
+fi
+
 # ZSH Autosuggestions
 
 if [ -e $HOME/.zsh/lib/zsh-autosuggestions.zsh ]; then
@@ -95,3 +103,4 @@ if [ -e $HOME/.zsh/lib/zsh-autosuggestions.zsh ]; then
 else
     ln -s $HOME/.dotfiles/.zsh/completion/zsh-autosuggestions/zsh-autosuggestions.zsh  .zsh/lib/zsh-autosuggestions.zsh
 fi
+

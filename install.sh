@@ -7,7 +7,7 @@ fzf_dir=$HOME/.fzf
 zlogin=$dotfiles/.zlogin
 vimrc=$dotfiles/.vimrc
 vim_dir=$dotfiles/.vim
-tmux_conf=$dotfiles/.tmux.conf
+tmux_conf=$dotfiles/.tmux/.tmux.conf
 gitignore=$dotfiles/.gitignore
 
 echo "Installing/Updating dotfiles...\n"
@@ -96,11 +96,5 @@ fi
 #    ln -s $HOME/.dotfiles/.config  $HOME/.config
 #fi
 
-# ZSH Autosuggestions
 
-if [ -e $HOME/.zsh/lib/zsh-autosuggestions.zsh ]; then
-  echo ".zsh-autosuggestions.zsh already exists..."
-else
-    ln -s $HOME/.dotfiles/.zsh/completion/zsh-autosuggestions/zsh-autosuggestions.zsh  .zsh/lib/zsh-autosuggestions.zsh
-fi
 

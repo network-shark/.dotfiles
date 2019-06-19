@@ -12,18 +12,11 @@ fpath=($HOME/.zsh/lib/completions $fpath)
 # Load and run compinit
 
 autoload -U promptinit; promptinit
-#prompt pure
 
 autoload -U compinit
 compinit -i
 
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-
-# Go Path related exports
-export GOPATH=~/Projekte/Go
-export PATH=$PATH:$GOPATH/bin
-
 
 
 ## pyenv configs
@@ -37,14 +30,4 @@ if command -v pyenv 1>/dev/null 2>&1; then
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#PYTHON_PACKAGES = "$(pip3 show powerline-status | grep Location: | awk '{print $2}')"
-#echo $PYTHON_PACKAGES
-if [ -f `which powerline-daemon` ]; then
-   powerline-daemon -q
-   POWERLINE_BASH_CONTINUATION=1
-   POWERLINE_BASH_SELECT=1
-#   POWERLINE_CONFIG_OVERRIDES=ext.shell.colorscheme=solarized
-   POWERLINE_COLORSCHEME_OVERRIDES=solarized
-   source $HOME/.zsh/lib/powerline.zsh
-fi
 

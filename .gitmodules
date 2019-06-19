@@ -27,3 +27,6 @@
 [submodule ".zsh/completion/zsh-autosuggestions"]
 	path = .zsh/completion/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule ".zsh/powerlevel10k"]
+	path = .zsh/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git

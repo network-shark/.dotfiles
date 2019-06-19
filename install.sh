@@ -63,38 +63,38 @@ else
 fi
 # ZSH Powerline
 
-if [ -e $HOME/.zsh/lib/powerline.zsh ]; then
-  echo ".powerline.zsh already exists..."
-else
-  powerline_zsh_path="$(find /usr/local/lib -name 'powerline.zsh' )"
-  for word in $powerline_zsh_path
-  do
-    ln -s $word .zsh/lib/powerline.zsh
-    echo ".powerline.zsh created"
-    break
-  done
-fi
+#if [ -e $HOME/.zsh/lib/powerline.zsh ]; then
+#  echo ".powerline.zsh already exists..."
+#else
+#  powerline_zsh_path="$(find /usr/local/lib -name 'powerline.zsh' )"
+#  for word in $powerline_zsh_path
+#  do
+#    ln -s $word .zsh/lib/powerline.zsh
+#    echo ".powerline.zsh created"
+#    break
+#  done
+#fi
 
-# Powerline Conf
-if [ -e $HOME/.powerline.conf ]; then
-  echo ".powerline.conf already exists..."
-else
-  powerline_conf_path="$(find /usr/local/lib -name 'powerline.conf' )"
-  for word in $powerline_conf_path
-  do
-    ln -s $word ~/.powerline.conf
-    echo ".powerline.conf created"
-    break
-  done
-fi
+## Powerline Conf
+#if [ -e $HOME/.powerline.conf ]; then
+#  echo ".powerline.conf already exists..."
+#else
+#  powerline_conf_path="$(find /usr/local/lib -name 'powerline.conf' )"
+#  for word in $powerline_conf_path
+#  do
+#    ln -s $word ~/.powerline.conf
+#    echo ".powerline.conf created"
+#    break
+#  done
+#fi
 
 # Powerline Local Config
 
-if [ -e $HOME/.config/powerline/config.json ]; then
-  echo ".config already exists..."
-else
-    ln -s $HOME/.dotfiles/.config  $HOME/.config
-fi
+#if [ -e $HOME/.config/powerline/config.json ]; then
+#  echo ".config already exists..."
+#else
+#    ln -s $HOME/.dotfiles/.config  $HOME/.config
+#fi
 
 # ZSH Autosuggestions
 

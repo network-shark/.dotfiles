@@ -10,8 +10,14 @@ syntax on
 filetype plugin indent on
 
 
+#set background=dark
+#color solarized
+#colorscheme solarized
+" settings needed for solarized colorscheme
+syntax enable
 set background=dark
-color solarized
+let g:solarized_termcolors=256
+colorscheme solarized
 
 "more characters will be sent to the screen for redrawing
 set ttyfast

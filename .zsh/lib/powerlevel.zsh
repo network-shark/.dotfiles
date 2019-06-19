@@ -1,1 +1,1 @@
-source ~/.dotfiles/zsh/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.dotfiles/.zsh/powerlevel10k/powerlevel10k.zsh-theme

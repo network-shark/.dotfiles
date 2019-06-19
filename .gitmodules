@@ -30,12 +30,3 @@
 [submodule ".zsh/powerlevel10k"]
 	path = .zsh/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
-[submodule ".tmux/plugins/powerline"]
-	path = .tmux/plugins/powerline
-	url = https://github.com/erikw/tmux-powerline.git
-[submodule ".tmux/plugins/.tmux/plugins/tmux-powerline"]
-	path = .tmux/plugins/.tmux/plugins/tmux-powerline
-	url = https://github.com/erikw/tmux-powerline.git
-[submodule ".tmux/plugins/tmux-powerline"]
-	path = .tmux/plugins/tmux-powerline
-	url = https://github.com/erikw/tmux-powerline.git

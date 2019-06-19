@@ -187,5 +187,5 @@ xnoremap <leader>j :m'>+<cr>gv=gv
 
 inoremap jk <esc>
 
-
-
+"Vim Airline
+let g:airline_powerline_fonts = 1

@@ -15,10 +15,6 @@ syntax enable
 set background=dark
 color solarized
 
-"syntax enable
-""let g:solarized_termcolors=256
-""set background=dark
-""colorscheme solarized
 
 "more characters will be sent to the screen for redrawing
 set ttyfast

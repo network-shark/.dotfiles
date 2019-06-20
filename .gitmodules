@@ -36,3 +36,6 @@
 [submodule ".vim/bundle/tmuxline.vim"]
 	path = .vim/bundle/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim
+[submodule ".tmux/plugins/tmux-current-pane-hostname"]
+	path = .tmux/plugins/tmux-current-pane-hostname
+	url = https://github.com/soyuka/tmux-current-pane-hostname.git

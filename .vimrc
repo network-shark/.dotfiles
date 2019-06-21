@@ -200,14 +200,15 @@ let g:tmuxline_preset = 'full'
 ""      \'x'    : '%a',
 ""      \'y'    : '#W %R',
 ""      \'z'    : '#H'}
-let g:tmuxline_preset = {
-      \'a'    : '#S',
-      \'c'    : ['#(whoami)', '#(uptime | cut -d " " -f 1,2,3)'],
-      \'win'  : ['#I', '#W'],
-      \'cwin' : ['#I', '#W', '#F'],
-      \'x'    : '#(date)',
-      \'y'    : ['%R', '%a', '%Y'],
-      \'z'    : '#H'}
+"only needed if you would create a new tmux bar config"
+""let g:tmuxline_preset = {
+""      \'a'    : '#S',
+""      \'c'    : ['#(whoami)', '#(uptime | cut -d " " -f 1,2,3)'],
+""      \'win'  : ['#I', '#W'],
+""      \'cwin' : ['#I', '#W', '#F'],
+""      \'x'    : '#(date)',
+""      \'y'    : ['%R', '%a', '%Y'],
+""      \'z'    : '#H'}
 
 
 

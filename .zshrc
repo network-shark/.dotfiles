@@ -19,6 +19,9 @@ compinit -i
 
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
+# Go Path related exports
+export GOPATH=~/Projekte/Go
+export PATH=$PATH:$GOPATH/bin
 
 ## pyenv configs
 export PYENV_ROOT="$HOME/.pyenv"

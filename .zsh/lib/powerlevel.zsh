@@ -1,6 +1,6 @@
 source ~/.dotfiles/.zsh/powerlevel10k/powerlevel10k.zsh-theme
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs virtualenv)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon host context dir vcs virtualenv)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs history custom_rprompt )
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_SHORTEN_DELIMITER=".."

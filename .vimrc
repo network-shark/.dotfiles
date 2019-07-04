@@ -168,11 +168,6 @@ let mapleader="\<Space>"
 nnoremap <leader>w :w<cr>
 
 
-"autoclose tags
-inoremap ( ()<Left>
-inoremap { {}<Left>
-inoremap [ []<Left>
-inoremap " ""<Left>
 
 "move lines around
 nnoremap <leader>k :m-2<cr>==

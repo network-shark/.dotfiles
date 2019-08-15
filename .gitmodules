@@ -27,7 +27,7 @@
 
 [submodule ".vim/bundle/Vim-Jinja2-Syntax"]
 	path = .vim/bundle/Vim-Jinja2-Syntax
-	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
+	url = https://github.com/Glench/Vim-Jinja2-Syntax
 
 [submodule ".zsh/completion/zsh-autosuggestions"]
 	path = .zsh/completion/zsh-autosuggestions
@@ -44,6 +44,3 @@
 [submodule ".tmux/plugins/tmux-current-pane-hostname"]
 	path = .tmux/plugins/tmux-current-pane-hostname
 	url = https://github.com/soyuka/tmux-current-pane-hostname.git
-[submodule "Vim-Jinja2-Syntax"]
-	path = Vim-Jinja2-Syntax
-	url = https://github.com/Glench/Vim-Jinja2-Syntax

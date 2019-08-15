@@ -39,6 +39,3 @@
 [submodule ".tmux/plugins/tmux-current-pane-hostname"]
 	path = .tmux/plugins/tmux-current-pane-hostname
 	url = https://github.com/soyuka/tmux-current-pane-hostname.git
-[submodule ".vim/bundle/jinja2-live-parser"]
-	path = .vim/bundle/jinja2-live-parser
-	url = https://github.com/qn7o/jinja2-live-parser

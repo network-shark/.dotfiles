@@ -145,6 +145,8 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " Gitgutter
 let g:gitgutter_sign_column_always = 1
 set updatetime=250
+" sls files
+let g:sls_use_jinja_syntax = 1
 
 " add yaml stuffs
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent

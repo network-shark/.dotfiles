@@ -44,3 +44,6 @@
 [submodule ".tmux/plugins/tmux-current-pane-hostname"]
 	path = .tmux/plugins/tmux-current-pane-hostname
 	url = https://github.com/soyuka/tmux-current-pane-hostname.git
+[submodule ".vim/bundle/salt-vim"]
+	path = .vim/bundle/salt-vim
+	url = https://github.com/saltstack/salt-vim.git

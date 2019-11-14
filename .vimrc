@@ -170,7 +170,8 @@ let mapleader="\<Space>"
 nnoremap <leader>w :w<cr>
 
 
-
+"disbale ctrl + w
+map <C-w> <Nop>
 "move lines around
 nnoremap <leader>k :m-2<cr>==
 nnoremap <leader>j :m+<cr>==
@@ -185,6 +186,8 @@ let g:airline_powerline_fonts = 1
 ""let g:tmuxline_preset = 'nightly_fox'
 " or
 let g:tmuxline_preset = 'full'
+
+
 " or
 ""let g:tmuxline_preset = 'tmux'
 ""let g:tmuxline_preset = 'tmux'

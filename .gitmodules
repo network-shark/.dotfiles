@@ -47,3 +47,9 @@
 [submodule ".vim/bundle/salt-vim"]
 	path = .vim/bundle/salt-vim
 	url = https://github.com/saltstack/salt-vim.git
+[submodule ".tmux/plugins/tmuxinator"]
+	path = .tmux/plugins/tmuxinator
+	url = https://github.com/tmuxinator/tmuxinator.git
+[submodule ".vim/bundle/vim-tmux-navigator"]
+	path = .vim/bundle/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git

@@ -16,10 +16,10 @@ set background=dark
 color solarized
 
 " " really, just don't
-inoremap <Up>    <NOP>
-inoremap <Down>  <NOP>
-inoremap <Left>  <NOP>
-inoremap <Right> <NOP>
+nnoremap <Up>    <NOP>
+nnoremap <Down>  <NOP>
+nnoremap <Left>  <NOP>
+nnoremap <Right> <NOP>
 
 "more characters will be sent to the screen for redrawing
 set ttyfast

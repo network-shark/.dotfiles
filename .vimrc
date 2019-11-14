@@ -15,6 +15,11 @@ syntax enable
 set background=dark
 color solarized
 
+" " really, just don't
+inoremap <Up>    <NOP>
+inoremap <Down>  <NOP>
+inoremap <Left>  <NOP>
+inoremap <Right> <NOP>
 
 "more characters will be sent to the screen for redrawing
 set ttyfast
@@ -156,6 +161,14 @@ autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 
 " FZF Runtimepath "
 set rtp+=~/.fzf
+let g:fzf_layout = { 'down': '~40%' }
+
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
 
 "set runtimepath^=~/.vim/bundle/ag
 "Show hidden files Nerdtree

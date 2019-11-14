@@ -111,14 +111,6 @@ let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore', '*.js',
 " make uses real tabs
 au FileType make set noexpandtab
 
-" Erlang uses 4 spaces
-au FileType erlang set softtabstop=4 tabstop=4 shiftwidth=4
-
-" Go uses tabs
-au FileType go set noexpandtab tabstop=4 shiftwidth=4
-
-" Go Foo
-let g:go_fmt_command = "goimports"
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
@@ -130,17 +122,23 @@ au BufNewFile,BufRead *.json set ft=javascript
 au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
 " ctrp custom ignores
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.eunit$',
-  \ 'file': '\.exe$\|\.so$\|\.dll\|\.beam$\|\.DS_Store$'
-  \ }
+"let g:ctrlp_custom_ignore = {
+"  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.eunit$',
+"  \ 'file': '\.exe$\|\.so$\|\.dll\|\.beam$\|\.DS_Store$'
+"  \ }
 
-let g:erlangCheckFile = "~/.vim/bundle/vimerl/compiler/erlang_check_file.erl"
-let g:erlangHighlightErrors = 1
 
 
 " Use Ag instead of Ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
+"
+"let g:ag_working_path_mode="r"
+"let g:ack_working_path_mode="r"
+if executable('ag')
+"  let g:ackprg = 'ag --vimgrep'
+"  let g:ackprg = 'ag --nogroup --nocolor --column'
+  let g:ackprg = 'ag --vimgrep'
+  let g:grepprg= 'ag --nogroup --nocolor'
+endif
 
 " Gitgutter
 let g:gitgutter_sign_column_always = 1
@@ -159,7 +157,7 @@ autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 " FZF Runtimepath "
 set rtp+=~/.fzf
 
-set runtimepath^=~/.vim/bundle/ag
+"set runtimepath^=~/.vim/bundle/ag
 "Show hidden files Nerdtree
 "let NERDTreeShowHidden=1
 
@@ -172,6 +170,37 @@ nnoremap <leader>w :w<cr>
 
 "disbale ctrl + w
 map <C-w> <Nop>
+
+nnoremap <C-g> :Ag<Cr>
+nnoremap <C-p> :Files<Cr>
+
+" Command for git grep
+" - fzf#vim#grep(command, with_column, [options], [fullscreen])
+command! -bang -nargs=* GGrep
+  \ call fzf#vim#grep(
+  \   'git grep --line-number '.shellescape(<q-args>), 0,
+  \   { 'dir': systemlist('git rev-parse --show-toplevel')[0] }, <bang>0)
+
+" Augmenting Ag command using fzf#vim#with_preview function
+"   * fzf#vim#with_preview([[options], [preview window], [toggle keys...]])
+"     * For syntax-highlighting, Ruby and any of the following tools are required:
+"       - Bat: https://github.com/sharkdp/bat
+"       - Highlight: http://www.andre-simon.de/doku/highlight/en/highlight.php
+"       - CodeRay: http://coderay.rubychan.de/
+"       - Rouge: https://github.com/jneen/rouge
+"
+"   :Ag  - Start fzf with hidden preview window that can be enabled with "?" key
+"   :Ag! - Start fzf in fullscreen and display the preview window above
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \                 <bang>0)
+
+" Likewise, Files command with preview window
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
 "move lines around
 nnoremap <leader>k :m-2<cr>==
 nnoremap <leader>j :m+<cr>==

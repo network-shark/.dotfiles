@@ -50,3 +50,6 @@
 [submodule ".vim/bundle/vim-tmux-navigator"]
 	path = .vim/bundle/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule ".vim/bundle/vim-smoothie"]
+	path = .vim/bundle/vim-smoothie
+	url = https://github.com/psliwka/vim-smoothie.git

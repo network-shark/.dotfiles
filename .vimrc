@@ -155,9 +155,9 @@ let g:sls_use_jinja_syntax = 1
 
 " add yaml stuffs
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
-"
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 et si ai
+autocmd FileType yml setlocal ts=2 sts=2 sw=2 et si ai
+
 " Ansible Stuff
 "au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
 

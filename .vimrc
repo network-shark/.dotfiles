@@ -38,9 +38,11 @@ set laststatus=2
 set statusline=%=%m\ %c\ %P\ %f
 
 " Add line numbers
-set number
+"set number
 set ruler
 set cursorline
+" turn hybrid line numbers on
+:set number relativenumber
 
 " Disable Backup and Swap files
 set noswapfile

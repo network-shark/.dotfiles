@@ -53,3 +53,6 @@
 [submodule ".vim/bundle/vim-smoothie"]
 	path = .vim/bundle/vim-smoothie
 	url = https://github.com/psliwka/vim-smoothie.git
+[submodule ".vim/bundle/coc"]
+	path = .vim/bundle/coc
+	url = https://github.com/neoclide/coc.nvim.git

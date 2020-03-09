@@ -185,8 +185,13 @@ nnoremap <leader>w :w<cr>
 
 "disbale ctrl + w
 map <C-w> <Nop>
-
+"
 nnoremap <C-g> :Ag<Cr>
+nnoremap <leader>g :GFiles<cr>
+nnoremap <leader>b :Buffers<cr>
+nnoremap <leader>h :Historycr>
+
+"
 nnoremap <C-p> :Files<Cr>
 
 " Command for git grep

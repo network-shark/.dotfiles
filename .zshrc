@@ -36,4 +36,5 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+unsetopt AUTO_NAME_DIRS
 

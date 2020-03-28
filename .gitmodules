@@ -41,9 +41,6 @@
 [submodule ".vim/bundle/tmuxline.vim"]
 	path = .vim/bundle/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim
-[submodule ".tmux/plugins/tmux-current-pane-hostname"]
-	path = .tmux/plugins/tmux-current-pane-hostname
-	url = https://github.com/soyuka/tmux-current-pane-hostname.git
 [submodule ".vim/bundle/salt-vim"]
 	path = .vim/bundle/salt-vim
 	url = https://github.com/saltstack/salt-vim.git
@@ -56,3 +53,6 @@
 [submodule ".vim/bundle/coc"]
 	path = .vim/bundle/coc
 	url = https://github.com/neoclide/coc.nvim.git
+[submodule ".tmux/plugins/tmux-scratchpad"]
+	path = .tmux/plugins/tmux-scratchpad
+	url = https://github.com/toddyamakawa/tmux-scratchpad.git

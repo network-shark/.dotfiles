@@ -9,6 +9,9 @@ syntax on
 
 filetype plugin indent on
 
+"" auto reload vimrc
+map <leader>r :so
+
 """"
 " settings needed for solarized colorscheme
 syntax enable
@@ -102,13 +105,11 @@ au FileType nerdtree setl cole=3 cocu+=n
 
 
 " Search related settings
-" show search matches as you type
 set incsearch
-" highlight search terms
 set hlsearch
 
-" Make double-<Esc> clear search highlights
-nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
+" Map Ctrl+l to clear highlighted searches
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " Highlight characters behind the 80 chars margin
 :au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
@@ -203,8 +204,6 @@ let g:fzf_action = {
 let mapleader="\<Space>"
 "save current buffer
 nnoremap <leader>w :w<cr>
-
-
 
 " Quickly edit/reload the vimrc file
 "nmap <silent> <leader>r :e $MYVIMRC<CR>

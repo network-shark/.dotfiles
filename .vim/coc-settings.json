@@ -1,0 +1,4 @@
+{
+  "suggest.autoTrigger": "always",
+  "python.jediEnabled": false
+}

@@ -38,7 +38,10 @@ set showmatch
 "more characters will be sent to the screen for redrawing
 set ttyfast
 
-
+" TODO
+" capslock to escape not working
+"au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+"au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
 
 " proper undo with hitory "
@@ -127,7 +130,8 @@ let NERDTreeNodeDelimiter = "\u00a0"
 
 " Enable Syntastic
 let g:syntastic_check_on_open=1
-let g:syntastic_python_checkers = ['pylint']
+"let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_checkers = ['mccabe,pep8,pyflakes']
 
 " Use dedicated syntax checkers for these languages
 "let g:syntastic_mode_map = {
@@ -160,11 +164,7 @@ au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
 " Use Ag instead of Ack
 "
-"let g:ag_working_path_mode="r"
-"let g:ack_working_path_mode="r"
 if executable('ag')
-"  let g:ackprg = 'ag --vimgrep'
-"  let g:ackprg = 'ag --nogroup --nocolor --column'
   let g:ackprg = 'ag --vimgrep'
   let g:grepprg= 'ag --nogroup --nocolor'
 endif
@@ -187,11 +187,6 @@ autocmd FileType yml setlocal ts=2 sts=2 sw=2 et si ai
 set rtp+=~/.fzf
 let g:fzf_layout = { 'down': '~40%' }
 
-" This is the default extra key bindings
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
 
 
 "set runtimepath^=~/.vim/bundle/ag
@@ -204,18 +199,13 @@ let mapleader="\<Space>"
 "save current buffer
 nnoremap <leader>w :w<cr>
 
-
-
-" Quickly edit/reload the vimrc file
-"nmap <silent> <leader>r :e $MYVIMRC<CR>
-
 "disbale ctrl + w
 map <C-w> <Nop>
 "
 nnoremap <C-g> :Ag<Cr>
 nnoremap <leader>g :GFiles<cr>
 nnoremap <leader>b :Buffers<cr>
-nnoremap <leader>h :Historycr>
+nnoremap <leader>h :History<cr>
 
 "
 nnoremap <C-p> :Files<Cr>
@@ -263,7 +253,28 @@ let g:airline_powerline_fonts = 1
 let g:tmuxline_preset = 'full'
 
 
+
+" COC Settings IDE Settings
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+
+"Use <Tab> and <S-Tab> to navigate the completion lis
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" TODO I don't thin shift tab works
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+"use <cr> to confirm completion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " or
+"
 ""let g:tmuxline_preset = 'tmux'
 ""let g:tmuxline_preset = 'tmux'
 ""let g:tmuxline_preset = {

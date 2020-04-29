@@ -18,15 +18,15 @@ autoload -U promptinit; promptinit
 autoload -U compinit
 compinit -i
 
-PATH=/usr/local/bin:/usr/local/sbin:$PATH
+#PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Go Path related exports
-export GOPATH=~/Projekte/Go
-export PATH=$PATH:$GOPATH/bin
+#export GOPATH=~/Projekte/Go
+#export PATH=$PATH:$GOPATH/bin
 
 ## pyenv configs
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"

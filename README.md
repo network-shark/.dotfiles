@@ -1,5 +1,8 @@
 Just clone and install with # ./dotfiles/install.sh
 
+##### Colors:
+Solorized
+
 ZSH Plugins:
 - powerline / powerlevel  # promt
 - fzf   # fuzzy finding
@@ -8,18 +11,17 @@ ZSH Plugins:
 VIM Plugins:
 - vim-pathogen
 - fzf.vim
-- nerdtree
 - syntasic
 - ack.vim
 
 
 Keystrokes
-# Tmux
-# create panes
+###### Tmux
+###### create panes
 
-# vertical
+###### vertical
 CTRL + B + |
-# horizontal
+###### horizontal
 CTRL + B + -
 
 # resize panes
@@ -31,8 +33,6 @@ CTRL + H J K L
 # rename pane
 CTRL + B + ,
 
-# rename pane
-CTRL + B + ,
 
 # swap pane
 # all at once

@@ -20,6 +20,9 @@ nnoremap <Up>    <NOP>
 nnoremap <Down>  <NOP>
 nnoremap <Left>  <NOP>
 nnoremap <Right> <NOP>
+"" Use CTRL D , CTRL E , CTRL B , or zt , zz , zb
+nnoremap <PageUp> <NOP>
+nnoremap <PageDown> <NOP>
 
 "" disable beep
 set visualbell

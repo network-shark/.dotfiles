@@ -29,7 +29,7 @@ set visualbell
 "" disable beep
 set noerrorbells
 
-"" enables to search files in subdirectories
+"" enables to search files in subdirectorieS
 set path+=**
 "" tabcompletion inside vim commandline
 set wildmenu
@@ -45,7 +45,18 @@ set ttyfast
 " capslock to escape not working
 "au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 "au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+" clipboard magic
 
+function! Osc52Yank()
+    let buffer = system('base64 | tr -d "\n"', @0)
+    let buffer = "\e]52;c;".buffer."\e\\"
+    call writefile([buffer], '/dev/tty', 'b')
+endfunction
+command! Osc52CopyYank call Osc52Yank()
+augroup Example
+    autocmd!
+    autocmd TextYankPost * if v:event.operator ==# 'y' | call Osc52Yank() | endif
+augroup END
 
 " proper undo with hitory "
 set undodir=~/.vim/undo
@@ -200,18 +211,24 @@ let g:fzf_layout = { 'down': '~40%' }
 "The Leader
 let mapleader="\<Space>"
 "save current buffer
-nnoremap <leader>w :w<cr>
+"nnoremap <leader>w :w<cr>
 
 "disbale ctrl + w
-map <C-w> <Nop>
-"
+"map <C-w> <Nop>
+" zoom split like tmux
+
+"nnoremap <silent><C-w>z :MaximizerToggle<CR>
+"vnoremap <silent><C-w>z :MaximizerToggle<CR>gv
+"inoremap <silent><C-w>z <C-o>:MaximizerToggle<CR>
+
 nnoremap <C-g> :Ag<Cr>
 nnoremap <leader>g :GFiles<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>h :History<cr>
 
 "
-nnoremap <C-p> :Files<Cr>
+"nnoremap <C-p> :Files<Cr>
+nnoremap <leader>f :Files<Cr>
 
 " Command for git grep
 " - fzf#vim#grep(command, with_column, [options], [fullscreen])

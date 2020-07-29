@@ -56,3 +56,7 @@
 [submodule ".tmux/plugins/tmux-scratchpad"]
 	path = .tmux/plugins/tmux-scratchpad
 	url = https://github.com/toddyamakawa/tmux-scratchpad.git
+
+[submodule ".tmux/plugins/extrakto"]
+	path = .tmux/plugins/extrakto
+	url = https://github.com/laktak/extrakto.git

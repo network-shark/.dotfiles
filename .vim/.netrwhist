@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/Users/sharky/python/salt/salt-sproxy_work'
+let g:netrw_dirhist_8='/Users/sharky/python/salt'
+let g:netrw_dirhist_7='/Users/sharky/python'
+let g:netrw_dirhist_6='/Users/sharky/python/netdev'
+let g:netrw_dirhist_5='/Users/sharky/python/netdev/deploy_hsrp'
+let g:netrw_dirhist_4='/Users/sharky/python'
+let g:netrw_dirhist_3='/Users/sharky/python/netdev'
+let g:netrw_dirhist_2='/Users/sharky/python/netdev/deploy_hsrp'
+let g:netrw_dirhist_1='/Users/sharky/python/salt/salt-sproxy_work/srv/salt/states/base'

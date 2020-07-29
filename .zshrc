@@ -19,6 +19,9 @@ autoload -U compinit
 compinit -i
 
 #PATH=/usr/local/bin:/usr/local/sbin:$PATH
+# Python AsyncIO Debugging
+export PYTHONASYNCIODEBUG=1
+export PYTHONTRACEMALLOC=1
 
 # Go Path related exports
 #export GOPATH=~/Projekte/Go

@@ -8,6 +8,7 @@ zlogin=$dotfiles/.zlogin
 vimrc=$dotfiles/.vimrc
 vim_dir=$dotfiles/.vim
 tmux_conf=$dotfiles/.tmux/.tmux.conf
+xresources=$dotfiles/.Xresources
 gitignore=$dotfiles/.gitignore
 
 echo "Installing/Updating dotfiles...\n"
@@ -44,6 +45,10 @@ echo "Creating Symlinks in $HOME environment"
 ## TMUX
 [ ! -e $HOME/.tmux.conf ] && ln -s $tmux_conf $HOME/.tmux.conf \
   || echo ".tmux.conf already exists..."
+
+## OSC 52 Clipboard
+[ ! -e $HOME/.Xresources ] && ln -s $xresources $HOME/.Xresources \
+  || echo ".Xresources already exists..."
 
 #FZF
 if [ ! -d $fzf_dir ]; then

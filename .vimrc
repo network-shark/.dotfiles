@@ -225,6 +225,7 @@ nnoremap <C-g> :Ag<Cr>
 nnoremap <leader>g :GFiles<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>h :History<cr>
+nnoremap <leader>r :register<cr>
 
 "
 "nnoremap <C-p> :Files<Cr>

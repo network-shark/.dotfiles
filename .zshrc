@@ -30,6 +30,7 @@ export PYTHONTRACEMALLOC=1
 ## pyenv configs
 #export PYENV_ROOT="$HOME/.pyenv"
 #export PATH="$PYENV_ROOT/bin:$PATH"
+# pyenv openssl fix / cryptography
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -41,3 +42,4 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 
 unsetopt AUTO_NAME_DIRS
 
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"

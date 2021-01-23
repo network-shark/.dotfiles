@@ -16,6 +16,12 @@ VIM Plugins:
 
 
 Keystrokes
+### Navigate with FD and FZF
+
+CTRL-T 	to fuzzily search for a file or directory in your home directory then insert its path at the cursor
+ALT-C  	to fuzzily search for a directory in your home directory then cd into it
+CTRL-R 	to fuzzily search your command line history then run an old command
+
 ###### Tmux
 ###### create panes
 

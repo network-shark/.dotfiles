@@ -1,6 +1,5 @@
 ##### How it looks !
-![Image of Terminal]
-(https://user-images.githubusercontent.com/5693155/138968118-7aee188f-adf0-45c9-aa64-be435b2b9575.png)
+![Image of Terminal](https://user-images.githubusercontent.com/5693155/138968118-7aee188f-adf0-45c9-aa64-be435b2b9575.png)
 
 Just clone and install with # ./dotfiles/install.sh
 

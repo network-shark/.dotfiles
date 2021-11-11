@@ -222,7 +222,10 @@ let mapleader="\<Space>"
 "inoremap <silent><C-w>z <C-o>:MaximizerToggle<CR>
 
 nnoremap <C-g> :Ag<Cr>
-nnoremap <leader>g :GFiles<cr>
+#nnoremap <leader>g :GFiles<cr>
+nnoremap <leader>gs :diffget //3<cr>
+nnoremap <leader>gu :diffget //2<cr>
+nnoremap <leader>gs :G<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>h :History<cr>
 nnoremap <leader>r :register<cr>

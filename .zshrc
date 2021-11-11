@@ -25,7 +25,7 @@ export PYTHONTRACEMALLOC=1
 
 # Go Path related exports
 #export GOPATH=~/Projekte/Go
-#export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin
 
 ## pyenv configs
 #export PYENV_ROOT="$HOME/.pyenv"
@@ -43,3 +43,8 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 unsetopt AUTO_NAME_DIRS
 
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+# >>>> Vagrant command completion (start)
+fpath=(/opt/vagrant/embedded/gems/2.2.14/gems/vagrant-2.2.14/contrib/zsh $fpath)
+compinit
+# <<<<  Vagrant command completion (end)

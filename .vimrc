@@ -9,6 +9,10 @@ syntax on
 
 filetype plugin indent on
 
+" change the direction of new splits
+set splitbelow
+set splitright
+
 """"
 " settings needed for solarized colorscheme
 syntax enable
@@ -221,18 +225,17 @@ let mapleader="\<Space>"
 "vnoremap <silent><C-w>z :MaximizerToggle<CR>gv
 "inoremap <silent><C-w>z <C-o>:MaximizerToggle<CR>
 
-nnoremap <C-g> :Ag<Cr>
+nnoremap <leader>g :Ag<Cr>
 "nnoremap <leader>g :GFiles<cr>
-nnoremap <leader>gs :diffget //3<cr>
-nnoremap <leader>gu :diffget //2<cr>
+nnoremap <leader>gl :diffget //3<cr>
+nnoremap <leader>gj :diffget //2<cr>
 nnoremap <leader>gs :G<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>h :History<cr>
 nnoremap <leader>r :register<cr>
-
+nnoremap <leader>f :Files<Cr>
 "
 "nnoremap <C-p> :Files<Cr>
-nnoremap <leader>f :Files<Cr>
 
 " Command for git grep
 " - fzf#vim#grep(command, with_column, [options], [fullscreen])

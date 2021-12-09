@@ -28,21 +28,24 @@ export PYTHONTRACEMALLOC=1
 export PATH=$PATH:$GOPATH/bin
 
 ## pyenv configs
+eval "$(pyenv init -)"
 #export PYENV_ROOT="$HOME/.pyenv"
 #export PATH="$PYENV_ROOT/bin:$PATH"
+#export PATH="$HOME/.pyenv/bin:$PATH"
 # pyenv openssl fix / cryptography
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-  fi
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+#eval "$(pyenv virtualenv-init -)"
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+#  fi
+#if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 unsetopt AUTO_NAME_DIRS
 
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+#export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 # >>>> Vagrant command completion (start)
 fpath=(/opt/vagrant/embedded/gems/2.2.14/gems/vagrant-2.2.14/contrib/zsh $fpath)

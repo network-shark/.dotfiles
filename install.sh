@@ -66,6 +66,14 @@ else
   echo "Error: Please install AG / the_silver_searcher"
   echo "# Install Instructions https://github.com/ggreer/the_silver_searcher"
 fi
+
+
+echo "Install node and yarn"
+echo "To get coc working in vim "
+echo "cd ~/.vim/bundle/coc"
+echo "yarn install"
+echo "yarn build"
+
 # ZSH Powerline
 
 #if [ -e $HOME/.zsh/lib/powerline.zsh ]; then

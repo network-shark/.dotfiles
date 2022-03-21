@@ -51,3 +51,4 @@ unsetopt AUTO_NAME_DIRS
 fpath=(/opt/vagrant/embedded/gems/2.2.14/gems/vagrant-2.2.14/contrib/zsh $fpath)
 compinit
 # <<<<  Vagrant command completion (end)
+export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"

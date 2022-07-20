@@ -13,10 +13,13 @@ fpath=($HOME/.zsh/lib/completions $fpath)
 
 # Load and run compinit
 
+autoload -U edit-command-line
 autoload -U promptinit; promptinit
 
 autoload -U compinit
 compinit -i
+
+zle -N edit-command-line
 
 #PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # Python AsyncIO Debugging
@@ -25,7 +28,7 @@ export PYTHONTRACEMALLOC=1
 
 # Go Path related exports
 #export GOPATH=~/Projekte/Go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:/Applications/clojure
 
 ## pyenv configs
 eval "$(pyenv init -)"

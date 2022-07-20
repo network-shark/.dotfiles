@@ -35,6 +35,10 @@ bindkey "\e[3~" delete-char
 #
 bindkey -v
 export KEYTIMEOUT=1
+# allows to edit long commands in your shell inside vim
+bindkey -M vicmd v edit-command-line
+
+
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
@@ -45,4 +49,5 @@ bindkey -v '^?' backward-delete-char
 # allows to use autosuggestions inside vi mode
 # just use esc space
 #bindkey -M vicmd "k" up-line-or-beginning-search
+#
 #bindkey -M vicmd "j" down-line-or-beginning-search

@@ -30,8 +30,8 @@ export PYTHONTRACEMALLOC=1
 #export GOPATH=~/Projekte/Go
 export PATH=$PATH:$GOPATH/bin:/Applications/clojure
 
-## pyenv configs
-eval "$(pyenv init -)"
+
+
 #export PYENV_ROOT="$HOME/.pyenv"
 #export PATH="$PYENV_ROOT/bin:$PATH"
 #export PATH="$HOME/.pyenv/bin:$PATH"
@@ -55,3 +55,10 @@ fpath=(/opt/vagrant/embedded/gems/2.2.14/gems/vagrant-2.2.14/contrib/zsh $fpath)
 compinit
 # <<<<  Vagrant command completion (end)
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+
+## This must be at the end of this file
+## pyenv configs
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

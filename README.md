@@ -25,7 +25,7 @@ CTRL-T 	to fuzzily search for a file or directory in your home directory then in
 ALT-C  	to fuzzily search for a directory in your home directory then cd into it
 CTRL-R 	to fuzzily search your command line history then run an old command
 
-###### Tmux
+### Tmux
 ###### create panes
 
 ###### vertical
@@ -62,5 +62,16 @@ CTRL + p
 CTRL + k
 # down
 CTRL + j
+
+### VIM
+
+###### horizontal VIM Pane
+CTRL + W + s
+###### vertical VIM Pane
+CTRL + W + v
+###### Switch VIM Pane
+CTRL + W
+
+
 
 

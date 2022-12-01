@@ -43,7 +43,10 @@ CTRL + H J K L
 CTRL + B + ,
 
 
-# swap pane
+# swap pane to pane -1
+CTRL + B +  {
+# swap pane to pane +1
+CTRL + B + }
 # all at once
 CTRL + B + o
 

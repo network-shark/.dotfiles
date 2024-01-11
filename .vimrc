@@ -236,6 +236,11 @@ nnoremap <leader>r :register<cr>
 nnoremap <leader>f :Files<Cr>
 "
 "nnoremap <C-p> :Files<Cr>
+"
+"
+"Disable execute: promt
+"bindkey -e -r '^[x'
+"bindkey -a -r ':'
 
 " Command for git grep
 " - fzf#vim#grep(command, with_column, [options], [fullscreen])

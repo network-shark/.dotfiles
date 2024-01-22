@@ -68,3 +68,6 @@
 [submodule ".vim/bundle/vim-iced"]
 	path = .vim/bundle/vim-iced
 	url = https://github.com/liquidz/vim-iced
+[submodule ".vim/bundle/vim-sexp"]
+	path = .vim/bundle/vim-sexp
+	url = https://github.com/guns/vim-sexp

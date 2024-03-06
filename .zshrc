@@ -62,6 +62,7 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+eval "$(zoxide init zsh)"
 
 # vim-iced
 export PATH=$PATH:~/.dotfiles/.vim/bundle/vim-iced/bin

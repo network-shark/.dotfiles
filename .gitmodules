@@ -71,3 +71,6 @@
 [submodule ".vim/bundle/vim-sexp"]
 	path = .vim/bundle/vim-sexp
 	url = https://github.com/guns/vim-sexp
+[submodule ".vim/bundle/rainbow"]
+	path = .vim/bundle/rainbow
+	url = https://github.com/luochen1990/rainbow.git

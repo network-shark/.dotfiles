@@ -227,8 +227,8 @@ let mapleader="\<Space>"
 
 nnoremap <leader>g :Ag<Cr>
 "nnoremap <leader>g :GFiles<cr>
-nnoremap <leader>gl :diffget //3<cr>
-nnoremap <leader>gj :diffget //2<cr>
+"nnoremap <leader>gl :diffget //3<cr>
+"nnoremap <leader>gj :diffget //2<cr>
 nnoremap <leader>gs :G<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>h :History<cr>
@@ -270,7 +270,7 @@ command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 "move lines around
-nnoremap <leader>k :m-2<cr>==
+nnoremap <leader>k :m-2<cr>== "moves current line up
 nnoremap <leader>j :m+<cr>==
 xnoremap <leader>k :m-2<cr>gv=gv
 xnoremap <leader>j :m'>+<cr>gv=gv
@@ -327,5 +327,32 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 ""      \'x'    : '#(date)',
 ""      \'y'    : ['%R', '%a', '%Y'],
 ""      \'z'    : '#H'}
+" Enable vim-iced's default key mapping
+" This is recommended for newbies
+"
+let g:iced_enable_default_key_mappings = v:true
+"open the buffer vertically
+let g:iced#buffer#stdout#mods = 'vertical'
+"
+"
+"nmap <leader>e <Plug>(iced_eval_and_print)af
+" activate rainbow
+let g:rainbow_active = 0
+
+"# not working?
+let g:sexp_enable_insert_mode_mappings=0
+call iced#hook#add('evaluated', {
+     \ 'type': 'function',
+     \ 'exec': {d -> iced#buffer#stdout#append(d['result']['value'])},
+     \ })
 
 
+"call iced#hook#add('evaluated', {
+"        \ 'type': 'shell',
+"        \ 'exec': {v -> printf('tmux display-message "%s"', v.summary)}
+"        \ })
+"call iced#hook#add(
+"	'evaluated', {
+"        \ 'type': 'command',
+"        \ 'exec': 'echom "hello"',
+"        \ })

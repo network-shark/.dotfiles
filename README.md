@@ -69,12 +69,20 @@ CTRL + j
 ### VIM
 
 ###### horizontal VIM Pane
-CTRL + W + s
+CTRL + w + s
 ###### vertical VIM Pane
-CTRL + W + v
+CTRL + w + v
 ###### Switch VIM Pane
-CTRL + W
+CTRL + w
 
+###### maximize vertical VIM Pane
+CTRL + w + _
+
+###### horizontally VIM Pane
+CTRL + w + |
+
+###### maximize VIM Pane
+CTRL + w + =
 
 
 

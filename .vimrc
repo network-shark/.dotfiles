@@ -178,8 +178,6 @@ au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 "  \ 'file': '\.exe$\|\.so$\|\.dll\|\.beam$\|\.DS_Store$'
 "  \ }
 
-
-
 " Use Ag instead of Ack
 "
 if executable('ag')
@@ -234,6 +232,13 @@ nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>h :History<cr>
 nnoremap <leader>r :register<cr>
 nnoremap <leader>f :Files<Cr>
+
+" Move split view to the left by 5% using <Leader>H
+nnoremap <Leader>H :vertical resize -5<CR>
+
+" Move split view to the right by 5% using <Leader>L
+nnoremap <Leader>L :vertical resize +5<CR>
+
 "
 "nnoremap <C-p> :Files<Cr>
 "
